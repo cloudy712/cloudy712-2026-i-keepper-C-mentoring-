@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(void) {
+    int a,b;
+    scanf("%d %d",&a,&b);
+
+    b-=45;
+
+    if(b>=0){
+        printf("%d %d",a,b);
+    }
+    else {
+        b+=60;
+        a-=1;
+        if (a < 0) {
+            a+=24;
+        }
+        printf("%d %d",a,b);
+
+    }
+   
+   
+    
+
+    
+}
