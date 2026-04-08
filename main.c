@@ -1,26 +1,18 @@
 #include <stdio.h>
 
-int main(void) {
-    int a,b;
-    scanf("%d %d",&a,&b);
+int main() {
+    int n;
+    scanf("%d",&n);
+    for (int i = 1; i <= n; i++){
+        for (int j = 0; j < i; j++) {
+            printf("*");
 
-    b-=45;
-
-    if(b>=0){
-        printf("%d %d",a,b);
-    }
-    else {
-        b+=60;
-        a-=1;
-        if (a < 0) {
-            a+=24;
         }
-        printf("%d %d",a,b);
-
+        printf("\n");
     }
-   
-   
-    
+return 0;
 
-    
+
+
 }
+
