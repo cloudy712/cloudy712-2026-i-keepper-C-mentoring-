@@ -1,18 +1,19 @@
 #include <stdio.h>
 
-int main() {
-    int n;
-    scanf("%d",&n);
-    for (int i = 1; i <= n; i++){
-        for (int j = 0; j < i; j++) {
-            printf("*");
-
-        }
-        printf("\n");
+int fib(int n) {
+    if (n==0){
+        return 0;
     }
-return 0;
-
-
-
+    if (n == 1){
+        return 1;
+    }
+    return fib(n-1) + fib(n-2);
+    
 }
 
+int main(void) {
+    int n;
+    scanf("%d",&n);
+
+    printf("피보나치 %d 번째 항은 %d 입니다.\n",n,fib(n));
+}
