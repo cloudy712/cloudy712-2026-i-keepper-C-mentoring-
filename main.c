@@ -1,19 +1,23 @@
 #include <stdio.h>
+#include <math.h>
 
-int fib(int n) {
-    if (n==0){
-        return 0;
-    }
-    if (n == 1){
-        return 1;
-    }
-    return fib(n-1) + fib(n-2);
-    
-}
+typedef struct {
+    float x;
+    float y;
 
-int main(void) {
-    int n;
-    scanf("%d",&n);
+} point;
 
-    printf("피보나치 %d 번째 항은 %d 입니다.\n",n,fib(n));
+int main() {
+
+    point a = {10.0, 15.0};
+    point b = {20.0, 20.0};
+
+    printf("%.2f %.2f\n", a.x, a.y);
+    printf("%.2f %.2f\n", b.x, b.y);
+
+    float res = sqrt(pow(b.x - a.x, 2.0) + pow(b.y - a.y, 2.0));
+
+    printf("%.2f\n", res);
+
+    return 0;
 }
